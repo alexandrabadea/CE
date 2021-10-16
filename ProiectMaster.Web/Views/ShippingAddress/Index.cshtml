@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ShippingAddressVM>;
+
+@{ ViewData["Title"] = "Shipping address"; }
+
+<div class="row mb-2 mt-2 operationsButtons">
+    <div class="col-md-12">
+        <a href="/ShippingAddress/New" class="btn btn-new btn-outline-new font-weight-bold mr-2" data-toggle="tooltip" title="New" data-placement="top">
+            <span class="fa fa-plus-circle"></span>
+        </a>
+
+        <button class="btn btn-outline-dark font-weight-bold mr-2" data-toggle="tooltip" title="Edit" data-placement="top" onclick="ShippingAddress.onEditBtnPress()">
+            <span class="fa fa-edit"></span>
+        </button>
+
+        <button type="button" class="btn btn-delete btn-outline-delete font-weight-bold mr-2" id="btnDelete" data-toggle="tooltip" data-placement="top" title="Delete" onclick="ShippingAddress.onDelete()">
+            <span class="fa fa-trash"></span>
+        </button>
+    </div>
+</div>
+
+<table id="table" class="table table-hover table-striped table-dark">
+    <thead>
+        <tr>
+            <th hidden>Shipping Address Id</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+<tr id="@item.Id">
+    <td hidden>@item.Id</td>
+    <td>@item.PersonName</td>
+    <td>@item.Phone</td>
+    <td>@item.Address</td>
+</tr>}
+
+    </tbody>
+
+</table>

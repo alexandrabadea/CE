@@ -1,0 +1,77 @@
+﻿@model ShippingAddressVM
+
+@{ string action = "";
+                if ((bool)ViewBag.IsNew)
+                    action = "/ShippingAddress/New";
+                else
+                    action = string.Format("/ShippingAddress/Edit/{0}", Model.Id); }
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 table-round bg-light shadow">
+
+        <br />
+        <h4>Shipping address</h4>
+        <br />
+
+        <div class="col-xl-12">
+
+            <input asp-for="Id" hidden />
+
+            <form action="@action" method="post">
+
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <br />
+                <div class="row">
+
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-4">
+                                <label class="control-label font-weight-bold">Name</label>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6">
+                                <input asp-for="PersonName" class="form-control" /><br />
+                                <span asp-validation-for="PersonName" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-4">
+                                <label class="control-label font-weight-bold">Phone</label>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6">
+                                <input asp-for="Phone" class="form-control" /><br />
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-4">
+                                <label class="control-label font-weight-bold">Address</label>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6">
+                                <input asp-for="Address" class="form-control" /><br />
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+
+                        </div>
+
+                        @await Html.PartialAsync(@"_CancelSaveBtn.cshtml");
+
+                    </div>
+
+            </form>
+
+        </div>
+
+    </div>
+</div>

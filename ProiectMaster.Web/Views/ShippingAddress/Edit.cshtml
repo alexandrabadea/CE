@@ -1,0 +1,7 @@
+﻿@model ShippingAddressVM
+
+@{ ViewData["Title"] = "Edit your shipping address"; }
+
+@{ ViewBag.IsNew = false;}
+
+@await Html.PartialAsync(@"../Shared/Components/_ShippingAddress.cshtml")
