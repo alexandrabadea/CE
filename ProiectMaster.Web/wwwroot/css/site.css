@@ -36,10 +36,10 @@ html {
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 4px solid #a60000;
 }
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #a60000;
 }
 
 .box-shadow {
@@ -81,7 +81,7 @@ body {
 }
 
 .btn-new {
-    background-color: aquamarine;
+    background-color: darkmagenta;
     border-radius: 5px;
 }
 
@@ -92,17 +92,17 @@ body {
     .btn-outline-new:hover {
         color: #000000;
         background-color: #fff;
-        border-color: aquamarine;
+        border-color: darkmagenta;
     }
 
     .btn-outline-new.focus, .btn-outline-new:focus {
-        box-shadow: 0 0 0 0.2rem #3DA28C;
+        box-shadow: 0 0 0 0.2rem #570931;
     }
 
 .btn-delete {
-    background-color: #F44336;
+    background-color: #911601;
     border-radius: 5px;
-    color: #FFF;
+    color: #808080;
 }
 
 .btn-outline-delete {
@@ -124,13 +124,13 @@ body {
 }
 
 .table-hover tbody tr:hover td {
-    background-color: aqua;
-    color: black;
+    background-color: magenta;
+    color: darkmagenta;
 }
 
 .tableSelectedRow {
     background-color: #F0E68C !important;
-    color: black;
+    color: darkmagenta;
 }
 
 .modal-header {
